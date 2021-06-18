@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".fragments.AddNowReportFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/titleOfPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="اضافة موضوع جديد عن \nمدينة القدس"
+                android:textColor="@color/txtTitleColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:textColor="@color/txtTitleColor"
+                android:text="عنوان الموضوع"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/txtTitleAdd"
+                style="@style/myTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txtReportColor"
+                android:textColorHint="@color/txtReportColor"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/shape_txt_input"
+                android:hint="أدخل عنوان الموضوع" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/txtTitleColor"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="اختر التصنيف"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toTopOf="@id/txt2"
+                    app:layout_constraintLeft_toRightOf="@+id/spCategory"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_txt_input"
+                    android:entries="@array/inputs"
+                    android:gravity="right"
+                    app:layout_constraintBottom_toBottomOf="@id/txt1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/txt1"
+                    app:layout_constraintTop_toTopOf="@id/txt1" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/txtTitleColor"
+                    android:padding="10dp"
+                    android:text="اختر صورة الموضوع"
+                    android:textSize="17sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt1" />
+
+                <ImageButton
+                    android:id="@+id/btnChooseImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/background"
+                    android:padding="5dp"
+                    android:src="@drawable/upload"
+                    app:layout_constraintBottom_toBottomOf="@id/txt2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txt2"
+                    app:layout_constraintTop_toTopOf="@id/txt2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardImage"
+               android:layout_width="350dp"
+               android:layout_gravity="center"
+               app:cardCornerRadius="8dp"
+               app:cardBackgroundColor="@color/background"
+               android:visibility="gone"
+               android:layout_height="200dp">
+               <ImageView
+                   android:id="@+id/img1"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginEnd="20dp"
+                   />
+           </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="الموضوع"
+                android:textColor="@color/txtTitleColor"
+                android:textSize="17sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtDetailsAdd"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColorHint="@color/txtReportColor"
+                    android:textColor="@color/txtReportColor"
+                    android:background="@drawable/shape_txt_input"
+                    android:gravity="start"
+                    android:hint="أدخل الموضوع"
+                    android:lines="5" />
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btnAddReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                style="@style/myTextView"
+                android:padding="10dp"
+                android:text="اضافة"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".fragments.SettingsFragment">
+
+    <TextView
+        android:id="@+id/titleOfPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="الضبط"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/layout_shapes"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="الوضع الليلي"
+            android:textColor="@color/txtTitleColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:text="َ "
+            android:textSize="10sp"
+            android:thumb="@drawable/custom_thumb"
+            app:layout_constraintBottom_toBottomOf="@id/txtNightMode"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtNightMode"
+            app:showText="true"
+            app:track="@drawable/custom_track" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/layout_shapes"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtChangeTitleSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="تغيير حجم خط العنوان"
+            android:textColor="@color/txtTitleColor"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEditTitleSize"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple_500"
+            android:src="@drawable/edit_size"
+            app:layout_constraintBottom_toBottomOf="@id/txtChangeTitleSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtChangeTitleSize" />
+
+        <LinearLayout
+            android:id="@+id/layoutTitleSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtChangeTitleSize">
+
+            <TextView
+                android:id="@+id/txtTestTitleSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="العنوان"
+                android:textColor="@color/txtTitleColor"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/rgTitleSizes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbSmall"
+                    style="@style/myTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="صغير"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rbNormal"
+                    style="@style/myTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="متوسط"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rbBig"
+                    style="@style/myTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="كبير"
+                    android:textColor="@color/txtReportColor" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancelTitleSize"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="إلغاء"
+                    android:textColor="@color/txtTitleColor" />
+
+                <Button
+                    android:id="@+id/btnSaveTitleSize"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="حفظ"
+                    android:textColor="@color/txtTitleColor" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/layout_shapes"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtChangeReportSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="تغيير حجم خط المواضيع"
+            android:textColor="@color/txtTitleColor"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEditReportSize"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple_500"
+            android:src="@drawable/edit_size"
+            app:layout_constraintBottom_toBottomOf="@id/txtChangeReportSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtChangeReportSize" />
+
+        <LinearLayout
+            android:id="@+id/layoutReportSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtChangeReportSize">
+
+            <TextView
+                android:id="@+id/txtTestReportSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="نصوص الموضوع"
+                android:textColor="@color/txtTitleColor"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/rgReportSizes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbSmallReport"
+                    style="@style/myTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="صغير"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rbNormalReport"
+                    style="@style/myTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="متوسط"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rbBigReport"
+                    style="@style/myTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="كبير"
+                    android:textColor="@color/txtReportColor" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancelReportSize"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="إلغاء"
+                    android:textColor="@color/txtTitleColor" />
+
+                <Button
+                    android:id="@+id/btnSaveReportSize"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="حفظ"
+                    android:textColor="@color/txtTitleColor" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/layout_shapes"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtChangeFontType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="تغيير نوع خطوط التطبيق"
+            android:textColor="@color/txtTitleColor"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEditFontType"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple_500"
+            android:src="@drawable/edit_size"
+            app:layout_constraintBottom_toBottomOf="@id/txtChangeFontType"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtChangeFontType" />
+
+        <LinearLayout
+            android:id="@+id/layoutFontType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtChangeFontType">
+
+            <RadioGroup
+                android:id="@+id/rgFontTypes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/rgFont1"
+                    style="@style/myTextView"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="النوع الأول"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rgFont2"
+                    style="@style/f1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="النوع الثاني"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rgFont3"
+                    style="@style/f2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="النوع الثالث"
+                    android:textColor="@color/txtReportColor" />
+
+                <RadioButton
+                    android:id="@+id/rgFont4"
+                    style="@style/f3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="النوع الرابع"
+                    android:textColor="@color/txtReportColor" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancelFontType"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="إلغاء"
+                    android:textColor="@color/txtTitleColor" />
+
+                <Button
+                    android:id="@+id/btnSaveFontType"
+                    style="@style/myTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="حفظ"
+                    android:textColor="@color/txtTitleColor" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

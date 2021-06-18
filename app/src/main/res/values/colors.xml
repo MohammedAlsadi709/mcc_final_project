@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#3E3E3E</color>
+    <color name="purple_500">#AFA86C</color>
+    <color name="purple_700">#7E794E</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#A5A17F</color>
+
+
+    <color name="card_view">#fff</color>
+    <color name="txtTitleColor">#000</color>
+    <color name="txtReportColor">#2C2C2C</color>
+
+    <color name="drawerBackgroundColor">#777246</color>
+    <color name="lineColor">#49452B</color>
+
+    <color name="btnShapeStart">#AFA86C</color>
+    <color name="btnShapeEnd">#333120</color>
+    <color name="btnPressedShapeStart">#424242</color>
+    <color name="btnPressedShapeEnd">#202020</color>
+    <color name="btnShapeStrock">#F3E890</color>
+
+    <color name="txtInputShape">#B8B492</color>
+    <color name="txtInputShapeStroke">#454123</color>
+
+
+
+</resources>

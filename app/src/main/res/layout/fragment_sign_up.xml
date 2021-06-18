@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".fragments.sign_up">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:text="التسجيل"
+        android:textColor="@color/txtTitleColor"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="البريد"
+        android:textColor="@color/txtTitleColor"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        style="@style/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_txt_input"
+        android:gravity="right"
+        android:hint="أدخل البريد"
+        android:padding="10dp"
+        android:textColor="@color/txtTitleColor"
+        android:textColorHint="@color/txtReportColor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="كلمة المرور"
+        android:textColor="@color/txtTitleColor"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        style="@style/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_txt_input"
+        android:gravity="right"
+        android:hint="أدخل كلمة المرور"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/txtTitleColor"
+        android:textColorHint="@color/txtReportColor" />
+
+    <Button
+        android:id="@+id/btnSign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        style="@style/myTextView"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="تسجيل"
+        android:textColor="@color/txtTitleColor"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/haveAccount"
+        android:layout_width="match_parent"
+        android:textColor="@color/txtReportColor"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="هل تمتلك حساب مسبقاً اضغط هنا"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

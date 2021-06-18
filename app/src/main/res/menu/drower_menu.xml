@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/news"
+        android:title="آخر الأخبار"
+        />
+    <item
+        android:id="@+id/generalView"
+        android:title="معلومات عامة حول القدس"
+        />
+    <item
+        android:id="@+id/religiousStatus"
+        android:title="مكانة القدس الدينية"
+        />
+    <item
+        android:id="@+id/landmarks"
+        android:title="معالم وآثار مدينة القدس"
+        />
+    <item
+        android:id="@+id/history"
+        android:title="تاريخ القدس والوقت الحاضر"
+        />
+
+    <item
+        android:id="@+id/gates"
+        android:title="أبواب القدس"
+        />
+
+    <item
+        android:id="@+id/videos"
+        android:title="مشاهدة بعض مظاهر القدس"
+        />
+
+    <item
+        android:id="@+id/addReport"
+        android:title="اضافة موضوع جديد عن مدينة القدس"
+        />
+
+<item
+    android:id="@+id/share"
+    android:title="مشاركة التطبيق"
+    />
+    <item
+        android:id="@+id/about"
+        android:title="نظرة عامة حول التطبيق"
+        />
+    <item
+        android:id="@+id/settings"
+        android:title="الضبط"
+        />
+    <item
+        android:id="@+id/close"
+        android:title="اغلاق التطبيق"
+        />
+
+</menu>

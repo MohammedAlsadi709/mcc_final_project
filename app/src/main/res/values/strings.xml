@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">دليل مدينة القدس</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="inputs">
+        <item>اختر التصنيف...</item>
+        <item>معلومات عامة حول القدس</item>
+        <item>مكانة القدس الدينية</item>
+        <item>معالم وآثار مدينة القدس</item>
+        <item>تاريخ القدس</item>
+        <item>أبواب القدس</item>
+    </string-array>
+</resources>

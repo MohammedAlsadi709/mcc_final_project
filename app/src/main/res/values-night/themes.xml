@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MCCFinalProject" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="myTextView" parent="TextAppearance.AppCompat" >
+        <item name="fontFamily">@font/font7</item>
+    </style>
+
+    <style name="Theme.MCCFinalProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/myTextView</item>
+        <item name="android:hint">@style/myTextView</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="f1" parent="TextAppearance.AppCompat" >
+        <item name="fontFamily">@font/font1</item>
+    </style>
+
+    <style name="f2" parent="TextAppearance.AppCompat" >
+        <item name="fontFamily">@font/font2</item>
+    </style>
+
+    <style name="f3" parent="TextAppearance.AppCompat" >
+        <item name="fontFamily">@font/font6</item>
+    </style>
+
+    <style name="font1">
+        <item name="windowActionBar">false</item>
+        <item name="backgroundColor">@color/background</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/f1</item>
+        <item name="android:buttonStyle">@style/f1</item>
+        <item name="android:hint">@style/f1</item>
+    </style>
+
+    <style name="font2">
+        <item name="windowActionBar">false</item>
+        <item name="backgroundColor">@color/background</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/f2</item>
+        <item name="android:buttonStyle">@style/f2</item>
+        <item name="android:hint">@style/f2</item>
+    </style>
+
+    <style name="font3">
+        <item name="windowActionBar">false</item>
+        <item name="backgroundColor">@color/background</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/f3</item>
+        <item name="android:buttonStyle">@style/f3</item>
+        <item name="android:hint">@style/f3</item>
+    </style>
+</resources>
